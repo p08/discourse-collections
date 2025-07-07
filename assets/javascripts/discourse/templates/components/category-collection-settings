@@ -1,0 +1,13 @@
+<div class="control-group">
+  <label class="control-label">Collection Title</label>
+  <input type="text" value={{this.name}} oninput={{action (mut this.name) value="target.value"}} />
+</div>
+
+<div class="control-group">
+  <label class="control-label">Collection Description</label>
+  <textarea value={{this.description}} oninput={{action (mut this.description) value="target.value"}} />
+</div>
+
+<button class="btn btn-primary" {{on "click" this.saveCollection}}>
+  {{if this.saving "Saving..." "Save Collection"}}
+</button>
